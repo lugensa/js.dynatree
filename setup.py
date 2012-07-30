@@ -15,7 +15,7 @@ long_description = (
     read('CHANGES.txt'))
 
 setup(
-    name='js.dyntree',
+    name='js.dynatree',
     version=version,
     description="fanstatic dyntree jQuery.",
     long_description=long_description,
@@ -34,7 +34,7 @@ setup(
         ],
     entry_points={
         'fanstatic.libraries': [
-            'dynatree = js.dynatree:library',
+            'js.dynatree = js.dynatree:library',
             ],
         },
     )
