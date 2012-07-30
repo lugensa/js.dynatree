@@ -1,10 +1,9 @@
 from fanstatic import Library, Resource
+import js.jquery
+import js.jqueryui
 
-library = Library('jquery', 'resources')
+library = Library('dynatree', 'resources')
 
-jquery = Resource(library, 'jquery/jquery.js',
-        minified='jquery/jquery.min.js')
-jquery_ui = Resource(library, 'jquery/jquery-ui.custom.js',
-        minified='jquery/jquery-ui.custom.min.js')
 dynatree = Resource(library, 'src/jquery.dynatree.js',
-        minified='src/jquery.dynatree.min.js')
+        minified='src/jquery.dynatree.min.js',
+        depends=[js.jquery.jquery, js.jqueryui.jqueryui])
