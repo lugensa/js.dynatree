@@ -1,0 +1,11 @@
+How to use?
+===========
+
+You can import dynatree from ``js.dynatree`` and ``need`` it where you want
+these resources to be included on a page::
+
+  >>> from js.dynatree import dynatree
+  >>> dynatree.need()
+
+.. _`fanstatic`: http://fanstatic.org
+.. _`dynatree`: http://code.google.com/p/dynatree/
