@@ -10,7 +10,7 @@ def read(*rnames):
 long_description = (
     read('README.txt')
     + '\n' +
-    read('js', 'dyntree', 'test_dytree.txt')
+    read('js', 'dynatree', 'test_dynatree.txt')
     + '\n' +
     read('CHANGES.txt'))
 
@@ -34,7 +34,7 @@ setup(
         ],
     entry_points={
         'fanstatic.libraries': [
-            'dyntree = js.dyntree:library',
+            'dynatree = js.dynatree:library',
             ],
         },
     )
