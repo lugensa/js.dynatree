@@ -2677,6 +2677,13 @@ TODO: better?
 			nodeTag = $(node.span),
 			hitMode,
 			enterResponse;
+        function inArray(elem, arr) {
+            var ret = -1;
+            if(typeof(arr) === "object") {
+                ret = $.inArray(elem, arr);
+            }
+            return ret;
+        }
 
 		switch (eventName) {
 		case "helper":
@@ -2711,9 +2718,9 @@ TODO: better?
 		case "enter":
 			res = dnd.onDragEnter ? dnd.onDragEnter(node, otherNode) : null;
 			res = {
-				over: (res !== false) && ((res === true) || (res === "over") || $.inArray("over", res) >= 0),
-				before: (res !== false) && ((res === true) || (res === "before") || $.inArray("before", res) >= 0),
-				after: (res !== false) && ((res === true) || (res === "after") || $.inArray("after", res) >= 0)
+				over: (res !== false) && ((res === true) || (res === "over") || inArray("over", res) >= 0),
+				before: (res !== false) && ((res === true) || (res === "before") || inArray("before", res) >= 0),
+				after: (res !== false) && ((res === true) || (res === "after") || inArray("after", res) >= 0)
 			};
 			ui.helper.data("enterResponse", res);
 //			this.logDebug("helper.enterResponse: %o", res);
