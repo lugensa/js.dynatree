@@ -23,6 +23,7 @@ setup(
     keywords='',
     author='Lugensa GmbH',
     author_email='jd@lugensa.com',
+    url='https://github.com/lugensa/js.dynatree',
     license='BSD',
     packages=find_packages(),
     namespace_packages=['js'],
